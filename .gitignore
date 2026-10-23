@@ -1,0 +1,4 @@
+outputs/
+.openai/
+.DS_Store
+Thumbs.db
