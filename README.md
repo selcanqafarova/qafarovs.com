@@ -1,4 +1,4 @@
-# QAFAROVS — Creative Digital Studio
+# QAFAROVS - Creative Digital Studio
 
 A responsive portfolio site for QAFAROVS, an independent creative practice focused on websites, digital products, visual identity, and communications.
 
