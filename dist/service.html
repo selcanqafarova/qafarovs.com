@@ -26,7 +26,7 @@
 const serviceScopes={web:['Audience and user journeys','Page structure and interface design','Responsive development and QA','Launch planning and handover'],brand:['Positioning, voice and visual direction','Wordmark and identity components','Color, type and layout rules','Examples for real-world touchpoints'],growth:['Audience, goals and message','Channel and content priorities','Campaign or editorial direction','A practical measurement plan'],care:['Current-site review and priority fixes','Content and interface updates','Accessibility and performance checks','A clear cadence for ongoing improvements']};
 const scopeType=new URLSearchParams(location.search).get('type'),scopeItems=serviceScopes[scopeType]||['Understand the starting point','Set a clear direction','Make and review the work','Plan the next step'];
 const scopeList=document.querySelector('#service-scope-list');if(scopeList){scopeList.replaceChildren(...scopeItems.map((label,index)=>{const row=document.createElement('p'),number=document.createElement('b'),text=document.createElement('span');number.textContent=String(index+1).padStart(2,'0');text.textContent=label;row.append(number,text);return row}))}
-</script><script src="assets/site-ru.js?v=2"></script></body></html>
+</script><script src="assets/site-ru.js?v=3"></script></body></html>
 
 
 
