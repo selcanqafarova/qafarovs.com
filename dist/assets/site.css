@@ -1076,3 +1076,12 @@ a:hover .arrow-mark,button:hover .arrow-mark,a:focus-visible .arrow-mark,button:
 .service-process{padding-bottom:clamp(20px,3vw,48px)}
 .service-fit{margin-top:clamp(20px,3vw,48px)}
 
+/* Compact language control shared by every page. */
+.language-switch{display:flex;align-items:center;gap:7px;margin-left:16px;flex:none;font:11px/1 var(--mono);letter-spacing:.04em;color:var(--ink)}
+.language-switch a{opacity:.58;transition:opacity .2s ease}
+.language-switch a:hover,.language-switch a[aria-current="true"]{opacity:1}
+.language-switch a[aria-current="true"]{text-decoration:underline;text-underline-offset:4px}
+.home-page .language-switch{color:#fff}
+body.menu-open .language-switch{color:#f7f6f1;position:relative;z-index:45}
+@media(max-width:760px){.language-switch{margin-left:12px;font-size:10px}}
+
