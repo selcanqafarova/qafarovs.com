@@ -1,6 +1,7 @@
 /* FAQ and work-terms pages */
 .faq-main,.terms-main{padding-bottom:clamp(64px,9vw,120px)}
 .faq-intro,.terms-intro{padding-bottom:clamp(36px,6vw,72px)}
+.faq-intro{padding-bottom:clamp(7px,1.2vw,14px)}
 .faq-intro h1,.terms-intro h1{max-width:1000px}
 .faq-list{border-top:1px solid var(--ink)}
 .faq-item{border-bottom:1px solid var(--line)}
