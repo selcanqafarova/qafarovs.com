@@ -2,7 +2,7 @@
   <div class="shell studio-footer-grid">
     <section class="studio-footer-about" aria-label="About QAFAROVS">
       <a class="studio-footer-wordmark" href="index.html" aria-label="QAFAROVS">QAFAROVS<sup>®</sup></a>
-      <p>QAFAROVS® is a creative studio proudly built around the Gafarov family name, with the long-term vision of growing into a global digital studio. We partner with founders, small teams, and growing businesses to turn their initial ideas and aspirations into meaningful digital experiences.<br><br>Our work spans strategy, brand identity, websites, and digital products, along with marketing and ongoing development when a project calls for it. Every collaboration begins with a close look at the audience, context, and constraints. From there, we outline a practical scope and set a clear path forward.<br><br>Based in Azerbaijan - works with teams around the world. We value open communication, attention to detail, and decisions that align with each project’s goals.</p>
+      <p>QAFAROVS® is a creative studio proudly built around the Gafarov family name, with the long-term vision of growing into a global digital studio. We partner with founders, small teams, and growing businesses to turn their initial ideas and aspirations into meaningful digital experiences.<br><br>Our work spans strategy, brand identity, websites, and digital products, along with marketing and ongoing development when a project calls for it. Every collaboration begins with a close look at the audience, context, and constraints. From there, we outline a practical scope and set a clear path forward.<br><br>Based in Azerbaijan - works with teams around the world. We value open communication, attention to detail, and decisions that align with each project's goals.</p>
     </section>
     <nav class="studio-footer-nav" aria-label="Footer navigation">
       <a href="index.html">Home <span><span class="arrow-mark">↗</span></span></a>
@@ -26,7 +26,7 @@
 const serviceScopes={web:['Audience and user journeys','Page structure and interface design','Responsive development and QA','Launch planning and handover'],brand:['Positioning, voice and visual direction','Wordmark and identity components','Color, type and layout rules','Examples for real-world touchpoints'],growth:['Audience, goals and message','Channel and content priorities','Campaign or editorial direction','A practical measurement plan'],care:['Current-site review and priority fixes','Content and interface updates','Accessibility and performance checks','A clear cadence for ongoing improvements']};
 const scopeType=new URLSearchParams(location.search).get('type'),scopeItems=serviceScopes[scopeType]||['Understand the starting point','Set a clear direction','Make and review the work','Plan the next step'];
 const scopeList=document.querySelector('#service-scope-list');if(scopeList){scopeList.replaceChildren(...scopeItems.map((label,index)=>{const row=document.createElement('p'),number=document.createElement('b'),text=document.createElement('span');number.textContent=String(index+1).padStart(2,'0');text.textContent=label;row.append(number,text);return row}))}
-</script></body></html>
+</script><script src="assets/site-ru.js?v=1"></script></body></html>
 
 
 
