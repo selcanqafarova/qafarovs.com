@@ -128,6 +128,7 @@
     'Current-site review and priority fixes': 'Аудит сайта и приоритетные исправления', 'Content and interface updates': 'Обновление контента и интерфейса', 'Accessibility and performance checks': 'Проверка доступности и производительности', 'A clear cadence for ongoing improvements': 'Понятный график дальнейших улучшений',
     'Open the English version': 'Открыть английскую версию'
     , 'FROM IDEA TO IMPACT': 'ОТ ИДЕИ К РЕЗУЛЬТАТУ', 'QF / 01': 'QF / 01', 'starting point.': 'точку старта', 'work better.': 'работать лучше',
+    '← Back to all work': '← Назад ко всем работам', 'SIGNAL': 'СИГНАЛ', 'MORE': 'БОЛЬШЕ', 'OBJECTS': 'ПРЕДМЕТЫ', 'FLOW': 'ПОТОК',
     'Websites & digital products, considered from the start.': 'Сайты и цифровые продукты — продуманно с самого начала.',
     'Brand & visual identity, considered from the start.': 'Бренд и визуальная айдентика — продуманно с самого начала.',
     'Growth & communication, considered from the start.': 'Продвижение и коммуникации — продуманно с самого начала.',
