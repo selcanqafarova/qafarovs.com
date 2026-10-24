@@ -23,7 +23,7 @@ if(form)form.addEventListener('submit',async e=>{
  status.textContent='Sending your inquiry…';
  if(submit)submit.disabled=true;
  try{
-  const response=await fetch('https://formsubmit.co/ajax/support@qafarovs.com',{
+  const response=await fetch('https://formsubmit.co/ajax/design@qafarovs.com',{
    method:'POST',
    headers:{'Content-Type':'application/json','Accept':'application/json'},
    body:JSON.stringify(Object.fromEntries(new FormData(form)))
@@ -33,7 +33,7 @@ if(form)form.addEventListener('submit',async e=>{
   form.reset();
   status.textContent='Thank you — your inquiry has been sent. We’ll be in touch soon.';
  }catch(error){
-  status.textContent='We couldn’t send your inquiry right now. Please email support@qafarovs.com.';
+  status.textContent='We couldn’t send your inquiry right now. Please email design@qafarovs.com.';
  }finally{
   if(submit){submit.disabled=false;submit.innerHTML=submitText}
  }
