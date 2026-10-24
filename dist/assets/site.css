@@ -365,6 +365,8 @@ body.menu-open{overflow:hidden}body.menu-open .wordmark{color:#f7f6f1;position:r
 .contact-page .field input,.contact-page .field select,.contact-page .field textarea{font-size:16px}
 .contact-page .form button{background:var(--accent);border-color:var(--accent)}
 .contact-page .form button:hover{background:var(--blue);border-color:var(--blue);color:white}
+.contact-page .form-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.contact-page .form button:disabled{opacity:.65;cursor:wait}
 .studio-footer{background:#050505}
 .studio-footer-display{font-size:clamp(72px,18.7vw,380px);letter-spacing:-.11em}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.7,.2,1)}

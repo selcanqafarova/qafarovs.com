@@ -14,7 +14,30 @@ if('IntersectionObserver'in window&&!window.matchMedia('(prefers-reduced-motion:
 }else revealNodes.forEach(node=>node.classList.add('is-in-view'));
 
 const form=document.querySelector('#project-form');
-if(form)form.addEventListener('submit',e=>{e.preventDefault();const status=document.querySelector('.form-status');if(status)status.textContent='Your inquiry is ready. Submissions will be delivered once a studio inbox is connected.'});
+if(form)form.addEventListener('submit',async e=>{
+ e.preventDefault();
+ const status=form.querySelector('.form-status');
+ const submit=form.querySelector('button[type="submit"]');
+ const submitText=submit?.innerHTML;
+ if(!status)return;
+ status.textContent='Sending your inquiry…';
+ if(submit)submit.disabled=true;
+ try{
+  const response=await fetch('https://formsubmit.co/ajax/support@qafarovs.com',{
+   method:'POST',
+   headers:{'Content-Type':'application/json','Accept':'application/json'},
+   body:JSON.stringify(Object.fromEntries(new FormData(form)))
+  });
+  const result=await response.json();
+  if(!response.ok||String(result.success).toLowerCase()!=='true')throw new Error(result.message||'The inquiry could not be sent.');
+  form.reset();
+  status.textContent='Thank you — your inquiry has been sent. We’ll be in touch soon.';
+ }catch(error){
+  status.textContent='We couldn’t send your inquiry right now. Please email support@qafarovs.com.';
+ }finally{
+  if(submit){submit.disabled=false;submit.innerHTML=submitText}
+ }
+});
 
 const stage=document.querySelector('.carousel-stage');
 if(stage){
