@@ -35,3 +35,9 @@
 @media(max-width:720px){.faq-item summary{grid-template-columns:34px 1fr 28px;gap:10px;padding:20px 0}.faq-answer{padding:0 0 22px 44px;font-size:14px}.faq-contact-cta,.terms-accept-note{align-items:flex-start;flex-direction:column}.terms-content article{grid-template-columns:34px minmax(0,1fr);gap:10px;padding:22px 0}.terms-content p{font-size:14px}.form-terms-link,.form-consent{grid-column:1}.terms-accept-note .button{white-space:normal}}
 @media(prefers-reduced-motion:reduce){.faq-toggle:after{transition:none}}
 
+/* Keep the AI note calm and compact while preserving comfortable readability. */
+.faq-ai-note{margin-top:clamp(34px,5vw,60px);padding:16px 0 0;background:transparent;border-left:0;border-top:1px solid var(--line);max-width:820px}
+.faq-ai-note .micro{font-size:9px;color:#65665f}
+.faq-ai-note p{font-size:12px;line-height:1.6;margin:8px 0 0;color:#55564f}
+@media(max-width:720px){.faq-ai-note{margin-top:32px;padding-top:14px}.faq-ai-note p{font-size:12px}}
+
