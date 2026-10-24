@@ -5,6 +5,7 @@
 .faq-intro h1,.terms-intro h1{max-width:1000px}
 .faq-list{border-top:1px solid var(--ink)}
 .faq-item{border-bottom:1px solid var(--line)}
+.faq-item:last-child{border-bottom:0}
 .faq-item summary{list-style:none;display:grid;grid-template-columns:52px 1fr 32px;gap:14px;align-items:center;padding:24px 4px;cursor:pointer;font-size:clamp(18px,2.4vw,28px);line-height:1.25;letter-spacing:-.035em}
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-number{font:11px var(--mono);color:var(--violet);letter-spacing:0}
