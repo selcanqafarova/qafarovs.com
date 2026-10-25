@@ -34,7 +34,7 @@ const cases={
 const key=new URLSearchParams(location.search).get('case')||'web',item=cases[key]||cases.web;document.body.dataset.case=key;document.querySelector(".project-page").dataset.case=key;document.title=item.title+' — QAFAROVS';
 for(const [id,value] of Object.entries({'case-label':item.label,'project-name':item.title,'project-summary':item.summary,'case-art-word':item.art,'case-caption':item.caption,'case-challenge-title':item.challengeTitle,'case-challenge':item.challenge,'case-direction-title':item.directionTitle,'case-direction':item.direction,'case-details-title':item.detailsTitle,'case-details':item.details})){const node=document.getElementById(id);if(node)node.textContent=value}
 const facts=document.getElementById('case-facts-list');if(facts)facts.replaceChildren(...item.facts.map(value=>{const p=document.createElement('p');p.textContent=value;return p}));
-</script><script src="assets/site-ru.js?v=4"></script></body></html>
+</script><script src="assets/site-ru.js?v=5"></script></body></html>
 
 
 
