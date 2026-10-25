@@ -1093,3 +1093,5 @@ html[lang="ru"] h1{font-family:Inter,Arial,sans-serif!important;font-weight:800!
 
 /* Keep the translated Work headline readable without clipping. */
 html[lang="ru"] .work-page .page-intro h1{font-size:clamp(40px,4.8vw,78px)!important;line-height:.95;letter-spacing:-.075em;max-width:1100px}
+
+html[lang="ru"] .work-page .page-intro h1 .headline-outline svg{display:none}
