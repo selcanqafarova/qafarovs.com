@@ -1085,3 +1085,7 @@ a:hover .arrow-mark,button:hover .arrow-mark,a:focus-visible .arrow-mark,button:
 body.menu-open .language-switch{color:#f7f6f1;position:relative;z-index:45}
 @media(max-width:760px){.language-switch{margin-left:12px;font-size:10px}}
 
+
+
+/* Bold Cyrillic-capable display headlines in the Russian version. */
+html[lang="ru"] h1{font-family:Inter,Arial,sans-serif!important;font-weight:800!important;-webkit-text-stroke:.012em currentColor}
