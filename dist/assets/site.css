@@ -1111,3 +1111,6 @@ html[lang="ru"] body:has(.journal-feature) .page-intro h1{font-size:clamp(46.08p
 html[lang="ru"] body:has(.journal-feature) .page-intro h1{font-size:clamp(59.904px,10.6704vw,175.968px)!important}
 html[lang="ru"] body:has(.journal-feature) .page-intro h1 .headline-outline{display:inline;white-space:normal}
 @media(max-width:760px){html[lang="ru"] body:has(.journal-feature) .page-intro h1{font-size:clamp(63.648px,16.848vw,112.32px)!important}}
+
+html[lang="ru"] body:has(.journal-feature) .page-intro h1{font-size:clamp(50.9184px,9.06984vw,149.5728px)!important}
+@media(max-width:760px){html[lang="ru"] body:has(.journal-feature) .page-intro h1{font-size:clamp(54.1008px,14.3208vw,95.472px)!important}}
