@@ -1089,3 +1089,7 @@ body.menu-open .language-switch{color:#f7f6f1;position:relative;z-index:45}
 
 /* Bold Cyrillic-capable display headlines in the Russian version. */
 html[lang="ru"] h1{font-family:Inter,Arial,sans-serif!important;font-weight:800!important;-webkit-text-stroke:.012em currentColor}
+
+
+/* Keep the translated Work headline readable without clipping. */
+html[lang="ru"] .work-page .page-intro h1{font-size:clamp(40px,4.8vw,78px)!important;line-height:.95;letter-spacing:-.075em;max-width:1100px}
