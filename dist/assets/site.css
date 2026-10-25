@@ -1107,3 +1107,7 @@ html[lang="ru"] body:has(.journal-feature) .page-intro h1{font-size:clamp(38.4px
 
 html[lang="ru"] body:has(.journal-feature) .page-intro h1{font-size:clamp(46.08px,8.208vw,135.36px)!important}
 @media(max-width:760px){html[lang="ru"] body:has(.journal-feature) .page-intro h1{font-size:clamp(48.96px,12.96vw,86.4px)!important}}
+
+html[lang="ru"] body:has(.journal-feature) .page-intro h1{font-size:clamp(59.904px,10.6704vw,175.968px)!important}
+html[lang="ru"] body:has(.journal-feature) .page-intro h1 .headline-outline{display:inline;white-space:normal}
+@media(max-width:760px){html[lang="ru"] body:has(.journal-feature) .page-intro h1{font-size:clamp(63.648px,16.848vw,112.32px)!important}}
