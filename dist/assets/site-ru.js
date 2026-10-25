@@ -212,7 +212,7 @@
       while (walker.nextNode()) if (walker.currentNode.nodeValue.trim()) nodes.push(walker.currentNode);
       const last = nodes[nodes.length - 1];
       if (last) {
-        const cleaned = last.nodeValue.replace(/\\.\\s*$/, '');
+        const cleaned = last.nodeValue.replace(/\.\s*$/, '');
         if (cleaned !== last.nodeValue) last.nodeValue = cleaned;
       }
     }
@@ -232,10 +232,15 @@
     const observer = new MutationObserver(records => records.forEach(record => {
       if (record.type === 'characterData') {
         translateNode(record.target);
-        removeTerminalHeadingPeriods(record.target.parentElement || document.body);
+        const heading = record.target.parentElement && record.target.parentElement.closest('h1');
+        if (heading) removeTerminalHeadingPeriods(heading);
       } else record.addedNodes.forEach(node => {
         translateNode(node);
-        if (node.nodeType === Node.ELEMENT_NODE) removeTerminalHeadingPeriods(node);
+        if (node.nodeType === Node.ELEMENT_NODE) {
+          const heading = node.matches('h1') ? node : node.closest('h1');
+          if (heading) removeTerminalHeadingPeriods(heading);
+          else removeTerminalHeadingPeriods(node);
+        }
       });
     }));
     observer.observe(document.body, {subtree:true, childList:true, characterData:true});
