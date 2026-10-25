@@ -202,6 +202,22 @@
     for (const child of [...node.childNodes]) translateNode(child);
   };
 
+  const removeTerminalHeadingPeriods = root => {
+    const scope = root && root.nodeType === Node.ELEMENT_NODE ? root : document;
+    const headings = scope.matches && scope.matches('h1') ? [scope] : [];
+    headings.push(...scope.querySelectorAll('h1'));
+    for (const heading of headings) {
+      const walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT);
+      const nodes = [];
+      while (walker.nextNode()) if (walker.currentNode.nodeValue.trim()) nodes.push(walker.currentNode);
+      const last = nodes[nodes.length - 1];
+      if (last) {
+        const cleaned = last.nodeValue.replace(/\\.\\s*$/, '');
+        if (cleaned !== last.nodeValue) last.nodeValue = cleaned;
+      }
+    }
+  };
+
   languageSwitch();
   document.documentElement.lang = isRu ? 'ru' : (specialRu ? 'ru' : 'en');
   if (isRu) {
@@ -212,10 +228,16 @@
     const description = document.querySelector('meta[name="description"]');
     if (description && ru[description.content]) description.content = ru[description.content];
     translateNode(document.body);
+    removeTerminalHeadingPeriods(document.body);
     const observer = new MutationObserver(records => records.forEach(record => {
-      if (record.type === 'characterData') translateNode(record.target);
-      else record.addedNodes.forEach(translateNode);
+      if (record.type === 'characterData') {
+        translateNode(record.target);
+        removeTerminalHeadingPeriods(record.target.parentElement || document.body);
+      } else record.addedNodes.forEach(node => {
+        translateNode(node);
+        if (node.nodeType === Node.ELEMENT_NODE) removeTerminalHeadingPeriods(node);
+      });
     }));
     observer.observe(document.body, {subtree:true, childList:true, characterData:true});
-  }
+  } else removeTerminalHeadingPeriods(document.body);
 })();
